@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,li {
+  list-style: none;
+}
+
+body {
+  background-color: #f0f0f0;
+  overflow: hidden;
+}   
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.title  {
+  text-align: center;
+}         
+
+.menu ul {
+  display: flex; /* 수평으로 배치 */
+  justify-content: space-between; /* 중앙 정렬 */
+  padding: 30px; /* 패딩 추가 */
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+
+.menu ul .toggle {
+ display: none;
+}
+
+/* 메뉴 토글 */
+
+@media (max-width: 768px) {
+  .menu ul {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .menu ul li {
+    display: none;
+   
+
+
+  }
+
+  .menu ul .toggle {
+    display: block;
+  }
+}
+
+.main > ul {
+  background-image: url(../imge/tour.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.main > ul > li {
+  font-size: 50px;
+  cursor: pointer;
+}
+.arrow-button {
+  font-size: 50px; /* 버튼의 글자 크기 */
+  border: 1px solid #333; /* 테두리 */
+  border-radius: 10px; /* 모서리 둥글게 */
+  padding: 10px 20px; /* 패딩 */
+  margin: 10px; /* 여백 */
+  background-color: #fff; /* 배경색 */
+  cursor: pointer; /* 커서 모양 변경 */
+  display: flex; /* 플렉스 박스 사용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  height: 70px; /* 버튼 높이 설정 (필요에 따라 조정) */
+}
