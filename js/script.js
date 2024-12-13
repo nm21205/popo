@@ -37,4 +37,12 @@ inside_buttons.forEach(button => {
                 console.log("알 수 없는 버튼");
         }
     });
-});
+        // hover 상태를 유지하기 위한 이벤트 리스너 추가
+        button.addEventListener("mouseenter", () => {
+            button.style.transform = "scale(1.2)"; // hover 시 크기를 키움
+        });
+    
+        button.addEventListener("mouseleave", () => {
+            button.style.transform = "scale(1)"; // 마우스가 떠날 때 원래 크기로 돌아감
+        });
+    });
