@@ -1,5 +1,6 @@
 // popo/js/script.js
 
+// 프런트 버튼
 const inside_buttons = document.querySelectorAll(".front_1 button");
 
 inside_buttons.forEach(button => {
@@ -46,3 +47,72 @@ inside_buttons.forEach(button => {
             button.style.transform = "scale(1)"; // 마우스가 떠날 때 원래 크기로 돌아감
         });
     });
+
+// 푸터 토글 버튼
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // 모든 ul 요소 선택
+        const uls = document.querySelectorAll('.bottom > ul');
+    
+        // GSAP 애니메이션 적용
+        uls.forEach((ul, index) => {
+            gsap.from(ul, {
+                duration: 1, // 애니메이션 지속 시간
+                y: 50, // 아래에서 위로 이동 (50px)
+                opacity: 0, // 처음에는 투명하게 시작
+                ease: "power1.out", // 이징 효과
+                scrollTrigger: {
+                    trigger: ul, // 트리거 요소
+                    start: "top 80%", // 화면의 80% 지점에서 시작
+                    toggleActions: "play none none reverse", // 스크롤 시 애니메이션 재생 및 되감기
+                    once: true // 한 번만 애니메이션 실행
+                }
+            });
+        });
+                // 위쪽 화살표 아이콘 클릭 이벤트
+                const scrollToTopButton = document.querySelector('.footer_top a i.fa-angle-up');
+    
+                scrollToTopButton.addEventListener('click', function(event) {
+                    event.preventDefault(); // 기본 링크 동작 방지
+                    gsap.to(window, {
+                        duration: 0.2, // 애니메이션 지속 시간
+                        scrollTo: 0, // 스크롤 위치 (페이지 맨 위)
+                        ease: "power1.out" // 이징 효과
+                    });
+                });
+
+        
+            });
+
+          
+
+
+            const toggleActions = document.querySelector('.toggle');
+const talkpage = document.querySelector('.talkpage');
+
+toggleActions.addEventListener('click', function() {
+    // talkpage가 보이지 않을 때
+    if (talkpage.style.display === 'none' || talkpage.style.display === '') {
+        talkpage.style.display = 'block'; // 먼저 display를 block으로 설정
+        gsap.fromTo(talkpage, {
+            opacity: 0,
+            y: -20 // 위에서 아래로 나타나게
+        }, {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: "power1.out"
+        });
+    } else {
+        gsap.to(talkpage, {
+            duration: 1,
+            opacity: 0,
+            y: -20, // 위로 사라지게
+            ease: "power1.in",
+            onComplete: function() {
+                talkpage.style.display = 'none'; // 애니메이션이 끝난 후 display를 none으로 설정
+            }
+        });
+    }
+});
