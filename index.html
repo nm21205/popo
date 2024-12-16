@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://kit.fontawesome.com/103d787f99.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div>
+    <div class="title">
+      <img src="./imge/LOGO1.jpg" alt="image">
+    </div>
+    <div class="menu">
+      <ul class="menu_top">
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">프리미엄</a></li>
+        <li><a href="#">여행지</a></li>
+        <li><a href="#">예약</a></li>
+        <li class="toggle"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+      </ul>
+    </div>
+
+    <ul class="talkpage">
+      <li><a href="#">회사소개</a></li>
+      <li><a href="#">프리미엄</a></li>
+      <li><a href="#">여행지</a></li>
+      <li><a href="#">예약</a></li>
+    </ul>
+
+
+
+    <div class="main">
+      <ul class="mainintro">
+        <li>
+          <button class="prevButton">&lt;</button> <!-- 화살표 버튼 -->
+        </li>
+        <li>
+          <h1>새로운 경험, 가치투어</h1>
+        </li>
+        <li>
+          <button class="nextButton">&gt;</button> <!-- 화살표 버튼 -->
+        </li>
+      </ul>
+    </div>
+    <div class="front">
+      <h2>카테고리</h2>
+      <ul class="front_1">
+        <li class="inside">
+          <button class="inside_button1">국내여행</button>
+        </li>
+        <li class="outside">
+          <button class="inside_button2">해외여행</button>
+        </li>
+        <li class="hotel">
+          <button class="inside_button3">호텔</button>
+        </li>
+      </ul>
+      <ul class="front_1">
+        <li class="cr">
+          <button class="inside_button4">테마/크루즈</button>
+        </li>
+        <li class="air">
+          <button class="inside_button5">항공</button>
+        </li>
+        <li class="rent">
+          <button class="inside_button6">렌터카</button>
+        </li>
+      </ul>
+    </div>
+    <div class="middle">
+      <h2>특가 추천 상품</h2>
+      <ul class="product">
+        <li>
+          <div class="sim"><a href=""><img src="./imge/sim 1.png" alt="image"></a>
+            <div class="sim_text">
+              <h1>국내 패키지</h1>
+              <h2>최저 500,000원 ~ </h2>
+            </div>
+          </div>
+        
+        </li>
+        <li>
+          <div class="osaka"><a href=""><img src="./imge/osaka 1.png" alt="image"></a>
+            <div class="osaka_text">
+              <h1>일본 패키지</h1>
+              <h2>최저 1,000,000원 ~</h2>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="europe"><a href=""><img src="./imge/europe 1.png" alt="image"></a>
+                <div class="europe_text">
+                  <h1>유럽 패키지</h1>
+                  <h2>최저 1,500,000원 ~</h2>
+                </div></div>
+         
+        </li>
+        <li>
+          <div class="manre"><a href=""><img src="./imge/manre 1.png" alt="image"></a>
+            <div class="manre_text">
+              <h1>중국 패키지</h1>
+              <h2>최저 1,000,000원 ~</h2>
+            </div>
+          </div>
+      
+        </li>
+  
+
+      </ul>
+    </div>
+  
+    <div class="bottom">
+      <h2>협력사</h2>
+      <ul class="bottom_1">
+        <li><img src="./imge/image 1.png" width="200px" height="200px" alt=""></li>   
+        <li><img src="./imge/image 2.png" width="200px" height="200px" alt=""></li>
+        <li><img src="./imge/image 3.png" width="200px" height="200px" alt=""></li>
+      </ul>
+      <ul class="bottom_2">
+        <li><img src="./imge/image 4.png" width="200px" height="200px" alt=""></li>
+        <li><img src="./imge/image 5.png" width="200px" height="200px" alt=""></li>
+        <li><img src="./imge/image 6.png" width="200px" height="200px" alt=""></li>
+      </ul>
+      <ul class="bottom_3"> 
+        <li><img src="./imge/image 7.png" width="200px" height="200px" alt=""></li>
+        <li><img src="./imge/image 8.png" width="200px" height="200px" alt=""></li>
+        <li><img src="./imge/협력 1.png" width="200px" height="200px" alt=""></li>
+      </ul>
+    </div>
+    <section class="qusetion"></section>
+  </div>
+  <footer>
+    <div class="footer_top">
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">프리미엄</a></li>
+        <li><a href="#">여행지</a></li>
+        <li><a href="#">예약</a></li>
+        <li><a href="#"><i class="fa-solid fa-angle-up"></i>TOP</a></li>
+      </ul>
+    </div>
+    <div class="footer_bottom">
+      <ul>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">Copyright 2024. 가치투어. All rights reserved.</a></li>
+      </ul>
+    </div>
+  </footer>
+  <footer_1>
+    <ul>
+      <li><a href="#">고객센터</a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">Copyright 2024. 가치투어. All rights reserved.</a></li>
+    </ul>
+  </footer-1>
+</body>
+
+</html>

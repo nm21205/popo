@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  overflow-x: visible; /* 수평 스크롤 방지 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  height: 340px;
+}
+
+.talkpage {
+  align-items: center;
+  background-color: white;
+  height: 450px;
+  position: absolute;
+  top: 430px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: block;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 100px;
+  text-align: center;
+  display: none;
+}
+
+.talkpage li {
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menu .menu_top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  border: 1px solid black;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+}
+
+.menu .menu_top .toggle {
+  display: none;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background-size: cover; /* 배경 이미지를 커버로 설정 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+  transition: background-image 0.5s ease;
+}
+
+.main > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main > ul > li > button {
+  font-size: 40px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: white;
+  color: black;
+  width: 50px;
+}
+
+.main > ul > li > button:hover {
+  background-color: transparent;
+  color: black;
+  transition: 0.2s;
+  border: 1px solid transparent;
+  transform: scale(1.2);
+  background-size: cover; /* 배경 이미지를 커버로 설정 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+  transition: background-image 0.2s ease; /* 배경 이미지 변경 시 부드러운 전환 효과 */
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(1px);
+  z-index: -1;
+}
+
+.front {
+  width: 100%;
+  height: 100%; /* 내용에 맞게 자동 조정 */
+  text-align: center;
+  background-image: url(../imge/air.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.front h2 {
+  margin-top: 100px;
+  font-size: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+.front > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.front > ul > li > button {
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  width: 200px;
+  line-height: 50px;
+}
+
+.front > ul > li > button:hover {
+  background-color: blue;
+  color: white;
+  border: 1px solid transparent;
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+.middle {
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+  text-align: center;
+  background-color: white;
+}
+
+.middle h2 {
+  margin: 100px;
+  font-size: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.middle ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+
+  
+}
+
+.middle ul li{
+  gap: 30px;
+}
+
+.middle ul li div h1 {
+  font-size: 50px;
+}
+
+.middle ul li div h2 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.middle ul li img {
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+}
+
+.middle ul li div {
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+}
+
+.middle ul li img:hover {
+  transform: scale(1.03);
+  transition: 0.5s;
+  box-shadow: 0 0 30px 5px rgba(3, 49, 255, 0.5); /* 노란색 그림자 */
+}
+
+/* 하단 */
+
+.bottom {
+  text-align: center;
+  width: calc(100% - 200px); /* 좌우 여백을 고려한 너비 설정 */
+  height: auto; /* 내용에 맞게 자동 조정 */
+  background-color: white;
+  position: relative;
+  margin: 0 auto; /* 수평 중앙 정렬 */
+  overflow: hidden;
+}
+
+.bottom h2 {
+  margin: 100px;
+  font-size: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.bottom ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+  position: relative;
+}
+
+.bottom .bottom_1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 50px;
+  box-shadow: 0 0 30px 5px rgba(3, 3, 3, 0.5); /* 검은색 그림자*/
+}
+
+.bottom .bottom_1 li {
+  margin: 70px;
+}
+
+.bottom .bottom_2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 50px;
+  z-index: 5;
+  top: -40px;
+  background-color: white;
+  box-shadow: 0 0 30px 5px rgba(3, 3, 3, 0.5); /* 검은색 그림자*/
+}
+
+.bottom .bottom_2 li {
+  margin: 70px;
+}
+
+.bottom .bottom_3 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 50px;
+  z-index: 6;
+  top: -70px;
+  background-color: white;
+  box-shadow: 0 0 30px 5px rgba(3, 3, 3, 0.5); /* 검은색 그림자*/
+  margin-bottom: 100px;
+}
+
+.bottom .bottom_3 li {
+  margin: 70px;
+}
+
+/* footer */
+
+body > footer {
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+  border: 1px solid transparent;
+  background-color: rgb(126, 240, 255);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+body > footer > .footer_top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+  margin-top: 30px;
+}
+
+body > footer > .footer_top > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px; /* 내용에 맞게 자동 조정 */
+  margin-bottom: 10px;
+ 
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+body > footer > .footer_top > ul > li > a {
+  color: black;
+}
+
+body > footer > .footer_bottom {
+  display: flex;
+  align-items: space-around;
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+  
+}
+
+body > footer > .footer_bottom > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: auto; /* 내용에 맞게 자동 조정 */
+  margin: 20px;
+  border-top: 1px solid black;
+  
+}
+
+body > footer > .footer_bottom > ul > li {
+  margin: 10px;
+  padding: 10px;
+  line-height: 10PX;
+  border: 4px solid white;
+}
+
+footer_1 {
+  display: none;
+}
+
+/* 1024px 미디어 쿼리 */
+@media screen and (max-width: 1024px) {
+  .menu .menu_top .toggle {
+    display: block;
+  }
+  .menu .menu_top li {
+    display: none;
+  }
+  .mainintro .prevButton {
+    display: none;
+  }
+  .mainintro .nextButton {
+    display: none;
+  }
+  .mainintro h1 {
+    font-size: 30px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+  }
+  .front {
+    display: flex;
+  }
+  .front h2 {
+    display: none;
+  }
+  .front ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 10px;
+  }
+  .middle ul {
+    display: grid; /* 그리드 레이아웃 사용 */
+    grid-template-columns: repeat(2, 1fr); /* 두 개의 열로 설정 */
+    padding: 50px;
+    gap: 40px; /* 아이템 간의 간격 조정 */
+  }
+  .bottom {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  footer_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px; /* 내용에 맞게 자동 조정 */
+    font-size: 10px;
+    background-color: rgb(126, 240, 255);
+  }
+  footer_1 > ul {
+    display: flex;
+  }
+}
+
+/* 768px 미디어 쿼리 */
+@media screen and (max-width: 768px) {
+  .menu .menu_top .toggle {
+    display: block;
+  }
+  .menu .menu_top li {
+    display: none;
+  }
+  .mainintro .prevButton {
+    display: none;
+  }
+  .mainintro .nextButton {
+    display: none;
+  }
+  .mainintro h1 {
+    font-size: 30px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+  }
+  .front {
+    display: flex;
+    flex-direction: column;
+  }
+  .front ul {
+    display: grid;
+    gap: 30px;
+    font-size: 10px;
+  }
+  .front h2 {
+    font-size: 30px;
+  }
+  .middle ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 50px;
+    gap: 30px;
+    font-size: 10px;
+  }
+  .bottom {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  footer_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px; /* 내용에 맞게 자동 조정 */
+    font-size: 10px;
+    background-color: rgb(126, 240, 255);
+  }
+  footer_1 > ul {
+    display: flex;
+  }
+}
