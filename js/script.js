@@ -99,14 +99,14 @@ toggleActions.addEventListener('click', function() {
             opacity: 0,
             y: -20 // 위에서 아래로 나타나게
         }, {
-            duration: 1,
+            duration: 0.3,
             opacity: 1,
             y: 0,
             ease: "power1.out"
         });
     } else {
         gsap.to(talkpage, {
-            duration: 1,
+            duration: 0.3,
             opacity: 0,
             y: -20, // 위로 사라지게
             ease: "power1.in",
@@ -116,3 +116,17 @@ toggleActions.addEventListener('click', function() {
         });
     }
 });
+
+talkpage.addEventListener('mouseleave', function() {
+    gsap.to(talkpage, {
+        duration: 0.3,
+        opacity: 0,
+        y: -20, // 위로 사라지게
+        ease: "power1.in",
+        onComplete: function() {
+            talkpage.style.display = 'none'; // 애니메이션이 끝난 후 display를 none으로 설정
+        }
+    });
+});
+
+
